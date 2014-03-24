@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link rel="stylesheet" href="../css/jquery-ui.css" />
+	<script src="../js/graph.js"></script>
+    <script src="../js/list.js"></script>
+
+    <script src="../js/antiscroll/jquery-mousewheel.js"></script>
+    <link href="../js/antiscroll/antiscroll.css" rel="stylesheet" />
+    <script src="../js/antiscroll/antiscroll.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/main_page.css" />
+
+	<script type="text/javascript">
+      
+	  google.load("visualization", "1", {packages:["corechart"]});
+           
+    </script>
+  </head>
+  <body>
+      <div id="container">
+          <div id="headbanner">
+	          <div id="icon">URBAN<span id="graph">graph</span></div>
+          </div>
+
+          <div id="dialog-modal" title="About URBANgraph">
+              <p>URBANgraph is an online tool for visualizing the results of
+              urban simulations
+              from <a href="http://www.urbansim.org/">URBANsim</a>.  The next
+              sensible question you might have is, "What is URBANsim?"  You
+              could just go read about it at that link I just typed.  But
+              here's the basics: urban planners gather a bunch of data (like
+              census data and buisiness location data) for a region of
+              interest.  Then they use URBANsim to estimate statistical models
+              like <a href="http://en.wikipedia.org/wiki/Ordinary_least_squares">OLS
+              models</a> and <a href="http://en.wikipedia.org/wiki/Logit">logit
+              models</a>. They also develop policies like urban growth
+              boundaries, affordable housing subsidies, and restrictions on
+              parking.  Multiple polices are grouped together as a scenario.
+              The models can then be used to forcast things, like where people
+              will choose to live, where businesses will choose to locate, and
+              what sorts of things developers will choose to build under the
+              proposed policies. URBANgraph is a tool to visualize the output
+              data as graphs.</p>
+          </div>
+
+          <div id="dialog-error" title="Error">
+          </div>
+
+          <div id="data-control">
+              <div id="about">
+                  <a id="about-urbangraph" href="#">About URBANgraph</a>
+              </div>
+
+              <div id="dataset-list">
+              <div id="search" class="left-header">
+                  Find <a class="tt" id="indicator-tt"
+                          title="'Indicators' are what the output data of a model is called.  You can search in this box for terms like 'employment' or 'households' to see what specific indicators are avaiable."
+                          href="#">indicators</a> by name:
+                  <input class="search" />
+              </div>
+
+              <div class="box-wrap antiscroll-wrap">
+                  <div class="box">
+                      <div class="antiscroll-inner">
+                          <div class="box-inner list-container">
+                              <ul class="list"></ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+
+              <div id="run-list">
+              <div id="rsearch" class="left-header">
+                  Find <a class="tt" id="run-tt"
+                          title="A 'run' is a one simulation run of the model from the base year to some future year."
+                          href="#">runs</a> by
+                  <a class="tt" id="scenario-tt"
+                     title="A 'scenario' is a set of policies meant to alter the projected future.  For example, an 'Infill' scenario would have policies that encouraged developers to build in areas that are already urbanized.  A 'Transit' scenario might analyze the outcomes of a large investment in the regional transit network."
+                     href="#">scenario</a> or description:
+                  <input class="search" />
+              </div>
+
+              <div class="box-wrap antiscroll-wrap">
+                  <div class="box">
+                      <div class="antiscroll-inner">
+                          <div class="box-inner list-container">
+                              <ul class="list"></ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+
+          </div>
+          <div id="chart-container">
+              <div id="chart-title-block">
+                  <div id="chart-title"></div>
+                  <div id="chart-subtitle"></div>
+              </div>
+              <div id="chart"></div>
+          </div>
+          <div id="chart-controls">
+              <div id="chart-mode" class="controls">
+                  Chart Mode
+                  <button class="button" id="pie-chart">Pie Chart</button>
+                  <button class="button" id="line-chart">Line Chart</button>
+              </div>
+              <div id="pie-controls" class="controls">
+                  Pie Chart Controls
+                  <form>
+                      <label for="xval_select">Year:</label>
+	                  <select id="xval_select">
+	                  </select>
+                  </form>
+              </div>
+              </form>
+          </div>
+      </div>
+  </body>
+</html>

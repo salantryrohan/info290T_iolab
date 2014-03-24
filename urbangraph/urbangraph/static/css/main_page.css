@@ -1,0 +1,324 @@
+
+body{
+    font-family:Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(select-arrow.png),
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 4px;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+  
+  .button {
+	background-color: rgb(179, 66, 66);
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid rgb(195, 82, 82);
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:1em;
+	font-weight:bold;
+	padding:2px 2px;
+	text-decoration:none;
+}.button:hover {
+	background-color: rgb(195, 82, 82);
+}.button:active {
+	position:relative;
+	top:1px;
+}
+
+#auth{
+    float:right;
+    width:25%;
+}
+
+#authbutton{
+    cursor:auto;
+    width: 200px;  height: 40px;  color: white; background-color: rgba(0, 99, 220, 0.68);
+    text-align: center;  font-size: 10px;
+    clear:both;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+    border-radius: 30px; 
+    line-height:2;
+    font-size:1.1em;
+}
+
+#logo{
+    float:left;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.3em;
+    font-weight:bold;
+    color:#0063dc;
+}
+
+#headbanner {
+    padding-left:15px;
+    padding-top:10px;
+    width:100%;
+    background-color:#FFF;
+    height:70px;
+}
+
+#r{
+	font-family: "American Typewriter", Courier, "Courier New", monospace;
+	color:#ff0084;
+	font-weight:normal;
+	font-size:1em;
+}
+
+
+.scroll-content-item { width: 100px; height: 100px; float: left; text-align: center; }
+
+
+
+#container{
+width:1300px;
+height:800px;
+
+}
+
+ #opt1{
+ border: 1px solid #AAA;
+  
+ }
+ 
+ #opt2{
+ border: 1px solid #AAA;
+  }
+   .rightzone{
+    background: rgba(0, 99, 220, 0.68);
+    padding-left: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius:15px;
+    float: left;
+    margin:15px;
+    padding:5px;  
+}
+
+.custom {
+border: 1px outset;
+padding: 4px;
+background-color: rgb(59, 89, 152);
+text-decoration: none;
+margin-right: 8px;
+}
+
+a {
+    color: black;
+}
+
+#data-control {
+    float:left;
+	width: 300px;
+	height: 600px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+	border: gray 2px solid;
+    border-radius: 10px;
+    float: left;
+    background-color: #FFF;
+    margin: 0px 4px;
+    padding: 5px 0px 5px 5px;
+}
+
+.list-container ul {
+	font-family: "American Typewriter", sans-serif;
+    font-size:1em;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    list-style-type:none;
+    /* Arg.  I really want nowrap on here, but it breaks the slick scrollbar */
+    /* white-space: nowrap; */
+    padding-left: 20px;
+    text-indent: -20px;
+}
+
+.list-container ul ul {
+    left:-9999px;
+    list-style-type:none;
+    padding-left:20px;
+    position:absolute;
+    color: gray;
+}
+.list-container li.open > ul {
+    position:static;
+}
+.list-container li > span.icon {
+    background:url(list.png) no-repeat;
+    display:inline-block;
+    height:16px;
+    margin-right:3px;
+    vertical-align:text-top;
+    width:16px;
+}
+.list-container li:last-child > span.icon {
+    background-position:0 -16px;
+}
+.list-container li.parent > span.icon {
+    background-position:0 -32px;
+}
+.list-container li.open > span.icon {
+    background-position:0 -48px;
+}
+
+@font-face {
+  font-family: BostonTraffic ;
+  src: url( boston.ttf ) format("truetype");
+}
+
+#icon {
+	font-family: BostonTraffic;
+	font-size:37;
+	color:rgb(179, 66, 66);
+	margin-left:15px;
+	margin-top:25px;
+}
+
+#graph{
+	font-family: "American Typewriter";
+	font-size:36;
+}
+
+#chart-container {
+    width: 900px;
+    height: 500px;
+	float:left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    float: left;
+	border: gray 2px solid;
+    border-radius: 10px;
+    margin: 0px 0px 4px 4px;
+}
+
+#chart {
+    width: 880px;
+    height: 420px;
+    margin: auto;
+}
+
+.box, .box .antiscroll-inner {
+    height: 220px;
+}
+
+.box-wrap {
+	height: 220px;
+    border-top: 1px gray solid;
+    border-bottom: 3px gray solid;
+    padding-top: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.left-header {
+    padding: 4px;
+}
+
+#chart-controls {
+    width: 890px;
+    height: 87px;
+    border: gray 2px solid;
+    border-radius: 10px;
+    float:left;
+    margin: 4px 0px 0px 4px;
+    padding: 5px;
+}
+
+.controls {
+    float: left;
+    border-right: gray 2px solid;
+    padding-right: 4px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+}
+
+#chart-mode {
+    width: 100px;
+}
+
+#pie-controls {
+    padding-left: 4px;
+}
+
+#chart-mode .button {
+    width: 100px;
+}
+
+#chart-title-block {
+    text-align: center;
+    width: 890px;
+    padding-top: 8px;
+    height: 60px;
+}
+
+#chart-title {
+	font-size: 25;
+}
+
+#chart-subtitle {
+	font-size: 16;
+    color: gray;
+}
+
+#rsearch {
+    padding-top: 8px;
+}
+
+#about {
+	height: 25px;
+    border-bottom: 3px gray solid;
+    padding-top: 2px;
+    padding-left: 4px;
+    margin-top: 2px;
+    width: 100%;
+}
+
+#dialog-modal {
+}
+
+.ui-dialog-titlebar {
+    background-image: none;
+    background-color: white;
+    border: none;
+    border-bottom: 3px gray solid;
+    border-radius: none;
+}
+
+/* tooltip styling */
+.ui-tooltip {
+    background: white;
+    border: 2px solid gray;
+}
+.ui-tooltip {
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 14;
+}
+
+.tt {
+	color:rgb(179, 66, 66);
+}
